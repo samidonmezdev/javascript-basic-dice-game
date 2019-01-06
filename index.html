@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Javascript Basic Dice Game-SAMİ DÖNMEZ
+</title>
+</head>
+<body>
+<div style="border: red 4px solid;margin: auto; ">
+    <img src="img/zar.png" style="margin: auto;">
+</div>
+<br>
+<div style="border: black 2px dashed; margin: auto; padding:5%; align-content: center;">
+    <div>
+    <img src="img/start.jpg" style="margin: auto;" height="300px"  width="300px" id="imggame">
+    </div>
+    <br>
+    <div>
+    <button id="bas" onclick="game()" style="margin: auto;">Start</button>
+    </div>
+</div>
+<script>
+
+function rastgele(alt, ust){
+    let sayi=Math.random();
+    sayi=sayi*(ust-alt);
+    sayi=Math.floor(sayi)+alt;
+
+    return sayi;
+}
+function game(alt, ust){
+var  deger=rastgele(1,6)
+if (deger==1) {
+    document.getElementById("imggame").src = "img/1.jpg";
+} else if (deger==2) {
+        document.getElementById("imggame").src = "img/2.jpg";
+}else if (deger==3) {
+        document.getElementById("imggame").src = "img/3.jpg";
+}else if (deger==4) {
+    document.getElementById("imggame").src = "img/4.jpg";
+}else if (deger==5) {
+    document.getElementById("imggame").src = "img/5.jpg";
+}else {
+    document.getElementById("imggame").src = "img/6.jpg";
+}
+}
+</script>
+</body>
+</html>
